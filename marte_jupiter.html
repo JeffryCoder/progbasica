@@ -8,38 +8,38 @@
         <h1>Tu peso en otro planeta</h1>
         <p>En la tierra pesas distinto que en marte o jupiter</p>
         <script>
-            var usuario = prompt("Cual es tu peso?");
-            var planeta = prompt("Elige tu planeta\n1 es marte. 2 es jupiter");
+            var usuario = prompt("Cual es tu peso?"); //Usamos promt(); para obtener dato del usuaro. En este casi el dato peso.
+            var planeta = prompt("Elige tu planeta\n1 es marte. 2 es jupiter"); //Obtenemos el dato del número elegido equivalente a un planeta. se usa \n para un salto de linea sensillo en javascripts
             var peso = parseInt(usuario);
             var g_tirra = 9.8;
             var g_marte = 3.7;
             var g_jupiter = 24.8;
             var peso_final;
             var planeta_elegido;
-         if(planeta == 1)
-         {
-            peso_final = peso * g_marte / g_tirra;
-            planeta_elegido = "Marte";
+            if(planeta == 1) //Entramos por primera vez a una estructura de control. los "if" Aquí decimos que si la variable planeta == 1 (Ese == es un simbolo de comparacion) entonces ejecute el bloque de codigo más abajo
+            {
+                peso_final = peso * g_marte / g_tirra; //Se ejecutará éste bloque de código si la condición que está arriba es verdadera
+                planeta_elegido = "Marte"; //La variable planeta_elegido sera = a "Marte" si se ejecuta la condicion de arriba
             
 
-         }
-         else if (planeta == 2)
-         {
-             peso_final = peso * g_jupiter / g_tirra;
-             planeta_elegido = "Jupiter";
-         }
-         else
-         {
-             peso_final = 1000000;
-             planeta_elegido = "Krypton";
-         }
+            }
+            else if (planeta == 2) //Esta es otra estructura de control los "else if" Su traducción sería: Si no... entonces si (Condición). En este caso compararía la condición y si es verdadera se ejecuta el codigo, en caso de que sea false se ejecutaría el "else"
+             {
+                peso_final = peso * g_jupiter / g_tirra;
+                planeta_elegido = "Jupiter"; //La variable planeta_elegido sera = a "Jupiter" si se cumple condicion de arriba
+            }
+            else //Otra estructura de control, esta solamente entra en juego si ningún else if o if son verdaderos. En caso de que no se cumpla ninguna de las condiciones de arriba simplemente se ejecutaria este bloque de codigo por defecto
+            {
+                peso_final = 1000000; //El peso_final sería 1,000,000 por defecto
+                planeta_elegido = "Krypton"; //Por defecto el planeta elegido sería "Krypton"
+            }
 
 
 
 
 
-            peso_final = parseInt(peso_final);
-            document.write( "Tu peso en " + planeta_elegido + " es <strong> " + peso_final + " kilos</strong>" );
+            peso_final = parseInt(peso_final); //El resultado de peso_final se convierte a número entero
+            document.write( "Tu peso en " + planeta_elegido + " es <strong> " + peso_final + " kilos</strong>" ); //Escribimos por pantalla concatenando un string + planeta_elegido + string + peso_final + string
         </script>
     </body>
 </html>
