@@ -8,15 +8,15 @@
         <h1>Tu peso en otro planeta</h1>
         <p>En la tierra pesas distinto que en marte o jupiter</p>
         <script>
-            var usuario = prompt("Cual es tu peso?");
-            var peso = parseInt(usuario);
-            var g_tirra = 9.8;
-            var g_marte = 3.7;
-            var g_jupiter = 24.8;
-            var peso_final;
-            peso_final = peso * g_marte / g_tirra;
-            peso_final = parseInt(peso_final);
-            document.write( "Tu peso en marte es <strong> " + peso_final + " kilos</strong>" );
+            var usuario = prompt("Cual es tu peso?"); //Aquí usamos por primera vez la función prompt(); . Esta función lo que hace es tomar datos del usuario y le pasamos por parámetro el mensajes que queramos enviar cuando hacemos ejecutar la función prompt(); .En este caso el resultado de la función lo estamos guardando en la variable usuario
+            var peso = parseInt(usuario); //Aquí usamos la función parseint(usuario); Para convertir el dato que el usuario nos introdujo en un número entero. Luego lo guardamos en la variable peso
+            var g_tirra = 9.8; //Creamos una variable llamada g_tierra (Haciendo referencia a la gravedad de la tierra) y le asignamos el valor 9.8
+            var g_marte = 3.7; //Creamos una variable llamada g_marte (Haciendo referencia a la gravedad de marte) y le asignamos el valor 3.7
+            var g_jupiter = 24.8; //Creamos una variable llamada g_jupiter (Haciendo referencia a la gravedad de jupiter) y le asignamos el valor 24.8
+            var peso_final; //Declaramos la variable peso_final sin ningun valor dentro
+            peso_final = peso * g_marte / g_tirra; //Decimos que el valor de peso_final es igual a la variable peso que fue el valor que introdujo el usuario por (*) la gravedad en marte (3.7) dividida entre la gravedad de la tierra (9.8)
+            peso_final = parseInt(peso_final); //El resultado de peso_final lo pasamos por la función parseInt para convertir el resultado a número entero
+            document.write( "Tu peso en marte es <strong> " + peso_final + " kilos</strong>" ); //Imprimimos por pantalla concatenando el string + peso_final + otro string
         </script>
     </body>
 </html>
